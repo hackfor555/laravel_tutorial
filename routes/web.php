@@ -26,8 +26,7 @@ Route::get('/', function () {
     ];
     return view('hello.index', $data); */
 Route::get('hello/', [HelloController::class, 'index']
-)->middleware(HelloMiddleware::class);
-
+);
     
 
 Route::post('hello', [HelloController::class, 'post']);
